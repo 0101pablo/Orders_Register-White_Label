@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Orders Register - White Label</string>
+    <string name="add_item_field_client_name_hint">Nome do cliente</string>
+    <string name="add_item_field_description_hint">Descrição</string>
+    <string name="add_item_field_quantity_hint">Quantidade</string>
+    <string name="add_item_field_unit_value_hint">valor unitário</string>
+    <string name="add_item_field_total_value_hint">valor total</string>
+    <string name="button_add_item">Adicionar Item</string>
+
+    <string name="orders_list_screen_title">Lista de Pedidos</string>
+    <string name="add_order_screen_title">Adicionar Pedido</string>
+    <string name="add_item_screen_title">Adicionar Item</string>
+    <string name="error_message_mandatory_field">Campo obrigatório</string>
+    <string name="content_description_add_order">Adicionar pedido</string>
+</resources>

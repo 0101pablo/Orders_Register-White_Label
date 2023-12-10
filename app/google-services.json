@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "243564227942",
+    "project_id": "orders-register-white-label",
+    "storage_bucket": "orders-register-white-label.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243564227942:android:fb8721110cb82c1382aca7",
+        "android_client_info": {
+          "package_name": "br.com.pablo.ordersregisterwhitelabel.alphacorp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlcBKErKKQeTdgenbfX1wHT-Puxoc6Jp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243564227942:android:80c54017d71f2f0e82aca7",
+        "android_client_info": {
+          "package_name": "br.com.pablo.ordersregisterwhitelabel.alphacorp.creator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlcBKErKKQeTdgenbfX1wHT-Puxoc6Jp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243564227942:android:e54524042e92dc5982aca7",
+        "android_client_info": {
+          "package_name": "br.com.pablo.ordersregisterwhitelabel.betacorp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlcBKErKKQeTdgenbfX1wHT-Puxoc6Jp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243564227942:android:afaabf3203f8effa82aca7",
+        "android_client_info": {
+          "package_name": "br.com.pablo.ordersregisterwhitelabel.betacorp.creator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlcBKErKKQeTdgenbfX1wHT-Puxoc6Jp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

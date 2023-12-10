@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/screen_padding"
+    tools:context=".ui.additem.AddItemFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_item_field_description_hint"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textCapSentences"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_quantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_item_field_quantity_hint"
+        app:layout_constraintEnd_toStartOf="@id/input_layout_unit_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_unit_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_item_field_unit_value_hint"
+        app:layout_constraintEnd_toStartOf="@id/text_view_total_value"
+        app:layout_constraintStart_toEndOf="@id/input_layout_quantity"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_unit_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_view_total_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_item_field_total_value_hint"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/input_layout_unit_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/input_layout_unit_value"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_description" />
+
+    <Button
+        android:id="@+id/button_add_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/button_add_item"
+        app:layout_constraintTop_toBottomOf="@id/text_view_total_value" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

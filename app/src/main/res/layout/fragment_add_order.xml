@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/screen_padding"
+    tools:context=".ui.addorder.AddOrderFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_client_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Cliente"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_client_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_add_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Incluir Item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_client_name" />
+
+    <TextView
+        android:id="@+id/item_description_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Descrição"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/item_quantity_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_add_item" />
+
+    <TextView
+        android:id="@+id/item_quantity_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quantidade"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/item_description_title"
+        app:layout_constraintEnd_toStartOf="@id/item_unit_value_title"
+        app:layout_constraintStart_toEndOf="@id/item_description_title"
+        app:layout_constraintTop_toTopOf="@id/item_description_title" />
+
+    <TextView
+        android:id="@+id/item_unit_value_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Valor Unitário"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/item_description_title"
+        app:layout_constraintEnd_toStartOf="@id/item_total_value_title"
+        app:layout_constraintStart_toEndOf="@id/item_quantity_title"
+        app:layout_constraintTop_toTopOf="@id/item_description_title" />
+
+    <TextView
+        android:id="@+id/item_total_value_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Valor Total"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/item_description_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_unit_value_title"
+        app:layout_constraintTop_toTopOf="@id/item_description_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="16dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/button_save_order"
+        app:layout_constraintTop_toBottomOf="@id/item_description_title"
+        tools:listitem="@layout/item_item" />
+
+    <TextView
+        android:id="@+id/order_items_quantity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantidade total de itens: "
+        app:layout_constraintBottom_toTopOf="@id/order_grand_total_value_title"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/order_items_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@id/order_items_quantity_title"
+        app:layout_constraintStart_toEndOf="@id/order_items_quantity_title"
+        app:layout_constraintTop_toTopOf="@id/order_items_quantity_title" />
+
+    <TextView
+        android:id="@+id/order_grand_total_value_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor total do pedido: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/order_grand_total_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 0,00"
+        app:layout_constraintBottom_toBottomOf="@id/order_grand_total_value_title"
+        app:layout_constraintStart_toEndOf="@id/order_grand_total_value_title"
+        app:layout_constraintTop_toTopOf="@id/order_grand_total_value_title" />
+
+    <Button
+        android:id="@+id/button_save_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/ordersListFragment">
+
+    <fragment
+        android:id="@+id/ordersListFragment"
+        android:name="br.com.pablo.ordersregisterwhitelabel.ui.orderslist.OrdersListFragment"
+        android:label="@string/orders_list_screen_title"
+        tools:layout="@layout/fragment_orders_list">
+        <action
+            android:id="@+id/action_ordersListFragment_to_addOrderFragment"
+            app:destination="@id/addOrderFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addOrderFragment"
+        android:name="br.com.pablo.ordersregisterwhitelabel.ui.addorder.AddOrderFragment"
+        android:label="@string/add_order_screen_title"
+        tools:layout="@layout/fragment_add_order">
+        <action
+            android:id="@+id/action_addOrderFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/addItemFragment"
+        android:name="br.com.pablo.ordersregisterwhitelabel.ui.additem.AddItemFragment"
+        android:label="@string/add_item_screen_title"
+        tools:layout="@layout/fragment_add_item" />
+
+
+</navigation>
